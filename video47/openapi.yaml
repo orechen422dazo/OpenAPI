@@ -1,4 +1,4 @@
-openapi: "3.0.3"
+openapi: "3.0.0"
 # 必須項目
 info:
   title: "Shop Review API"
@@ -14,17 +14,17 @@ paths:
           in: path
           required: true
           schema: { type: string }
-      requestBody:
-        description: "Contents of review"
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                score: { type: integer }
-                comment: { type: string , example: "Delicious" }
-          
+          example: "abcdefg"
+        - name: X-Api-Key
+          in: header
+          description: "Request user's indentifier"
+          schema: { type: string }
+          example: "XXXX-XXXX-XXXX-XXXX"
+        - name: token
+          in: cookie
+          description: "One time token"
+          schema: { type: string }
+          example: "XXXX-XXXX-XXXX-XXXX"
       responses:
         "201": # データがないこともあるので２０１
           description: "Success operation"
