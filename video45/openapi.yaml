@@ -1,0 +1,15 @@
+openapi: "3.0.0"
+# 必須項目
+info:
+  title: "Shop Review API"
+  version: "1.0.0"
+
+servers:
+  - url: "http://localhost:{port}"
+    description: "Local development"
+    variables:
+      port:
+        enum: ["3000", "8080"]
+        default: "3000"
+
+paths: {}

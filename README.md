@@ -3,7 +3,7 @@
 create openapio.yaml
 ```yaml
 openapi: "3.0.0"
-
+# 必須項目
 info:
   title: "Sample API"
   version: 1.0.0

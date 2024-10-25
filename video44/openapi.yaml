@@ -1,0 +1,19 @@
+openapi: "3.0.0"
+# 必須項目
+info:
+  title: "Shop Review API"
+  description: |
+    # Features
+    - Get reviews
+    - Post review
+  termsOfService: "https://tastylog.com/terms/"
+  contact:
+    name: "Customer Support"
+    url: "https://tastylog.com/terms/"
+    email: "support-desk@tastylog.com"
+  license:
+    name: "MIT license"
+    url: "https://opensource.org/licenses/MIT"
+  version: "1.0.0"
+
+paths: {}

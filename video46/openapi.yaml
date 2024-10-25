@@ -1,0 +1,22 @@
+openapi: "3.0.0"
+# 必須項目
+info:
+  title: "Shop Review API"
+  version: "1.0.0"
+# API定義のパス
+# pathは複数形で書く
+paths:
+  "/shops/{shopId}/reviews":
+    get:
+      summary: "Get specified shop reviews"
+      description: "(description): Get specified"
+      tags: ["shops"] # お店なのshopsというtagsをつける
+      deprecated: false
+      parameters:
+        - name: shopId
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        "200":
+          description: "Success operation"
