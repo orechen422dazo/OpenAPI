@@ -1,0 +1,23 @@
+openapi: "3.0.3"
+# 必須項目
+info:
+  title: "Shop Review API"
+  version: "1.0.0"
+
+paths:
+  {}
+
+components:
+  schemas:
+    SampleIint:
+      type: integer
+      minimum: 0
+      exclusiveMinimum: false
+      maximum: 100
+      exclusiveMaximum: true
+    SampleString:
+      type: string
+      minLength: 10
+      maxLength: 20
+    SampleBoolen:
+      type: boolean

@@ -1,0 +1,38 @@
+openapi: "3.0.3"
+
+# 必須項目
+info:
+  title: "Shop Review API"
+  version: "1.0.0"
+
+tags:
+  - name: revies
+    description: "Shop review operation"
+
+paths:
+  "/shops/{shopId}/reviews":
+    # パラメーターを外に配置するとget, postで使えるように設定できて何度も書かなくて良くなる。
+    parameters:
+          - name: shopId
+            in: path
+            required: true
+            schema: { type: string }
+
+    get:
+      summary: "Get shop reviews"
+      tags: ["reviews"]
+      parameters:
+        - name: shopId
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+          "200":
+             description: "Success operation"
+    post:
+      summary: "Create new review"
+      tags: ["reviews"]
+      responses:
+        "201":
+          description: "Success operation"
+    
